@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="hibernate-commons-annotations-4.0.4.Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/Hibernate Jar/hibernate-commons-annotations-4.0.4.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Hibernate Jar/hibernate-core-4.3.5.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Hibernate Jar/hibernate-ehcache-4.3.5.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Hibernate Jar/hibernate-jpa-2.1-api-1.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

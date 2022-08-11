@@ -1,0 +1,7 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(çç¶œþÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ïóÿƒüÿÿÿÿ
+Q
+java:S1874";Remove this use of "buildSessionFactory"; it is deprecated.(¡ÓÓ¥
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Úà—›þÿÿÿÿ
