@@ -13,6 +13,7 @@ public interface FlightService {
 	List<Flight> getAllFlightsByStop(String flightType);
 	List<Flight> getAllFlights();
 	FlightResponseDTO addFlight(Flight flight);
+	void deleteFlight(Long flightId);
 	FlightResponseDTO updateFlight(Flight flight);
 	FlightResponseDTO addSchedule(Long flightId, ScheduleDTO schedule);
 	ScheduleDTO getScheduleByFlight(Long flightId);

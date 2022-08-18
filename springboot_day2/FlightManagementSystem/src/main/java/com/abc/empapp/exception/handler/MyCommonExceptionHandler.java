@@ -66,22 +66,12 @@ public class MyCommonExceptionHandler {
     }
 
     @ExceptionHandler
-    public ResponseEntity<MyExceptionTemplate> illegalFlightTypeExceptionHandler(IllegalFlightTypeException exception) {
-
-        MyExceptionTemplate template = new MyExceptionTemplate();
-        template.setTodayTime(LocalTime.now());
-        template.setTodayTime(LocalTime.now());
-        template.setSolution("Provided flight type is not correct. Accepted types: Domestic / International");
-        return new ResponseEntity<>(template, HttpStatus.BAD_REQUEST);
-    }
-
-    @ExceptionHandler
     public ResponseEntity<MyExceptionTemplate> flightScheduleAdditionExceptionHandler(IllegalFlightTypeException exception) {
 
         MyExceptionTemplate template = new MyExceptionTemplate();
         template.setTodayDate(LocalDate.now());
         template.setTodayTime(LocalTime.now());
-        template.setSolution("Arrival date is before departure date, please fix time schedules.");
+        template.setSolution("Illegal flight type.");
         return new ResponseEntity<>(template, HttpStatus.BAD_REQUEST);
     }
 }

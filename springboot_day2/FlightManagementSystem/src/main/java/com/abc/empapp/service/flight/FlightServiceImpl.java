@@ -25,6 +25,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
+import static java.util.Objects.nonNull;
+
 @Service
 public class FlightServiceImpl implements FlightService {
 
@@ -61,8 +63,16 @@ public class FlightServiceImpl implements FlightService {
     public FlightResponseDTO addFlight(Flight flight) {
 
         Flight savedFlight = flightDAO.save(flight);
-        Schedule schedule = scheduleDAO.save(flight.getFlightSchedule());
+        if (nonNull(flight.getFlightSchedule())) {
+            Schedule schedule = scheduleDAO.save(flight.getFlightSchedule());
+
+        }
         return dtoConvertor.getFlightReponseDTO(savedFlight);
+    }
+
+    @Override
+    public void deleteFlight(Long flightId) {
+        flightDAO.deleteById(flightId);
     }
 
     @Override
@@ -122,7 +132,6 @@ public class FlightServiceImpl implements FlightService {
         String query = "from Flight where flightType =: type";
         TypedQuery<Flight> q = entityManager.createQuery(query, Flight.class);
         q.setParameter("type", flightType);
-        System.out.println("da");
         return q.getResultList();
     }
 

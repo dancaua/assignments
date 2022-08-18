@@ -23,7 +23,7 @@ public class FlightRestController {
         this.flightService = flightService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Flight> getAllFlights(@RequestParam(required = false) String sortDirection) {
         return flightService.getAllFlights(sortDirection);
     }
