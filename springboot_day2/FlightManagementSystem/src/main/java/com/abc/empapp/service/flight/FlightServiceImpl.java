@@ -30,7 +30,6 @@ import static java.util.Objects.nonNull;
 @Service
 public class FlightServiceImpl implements FlightService {
 
-
     private final FlightDAO flightDAO;
     private final ScheduleDAO scheduleDAO;
     private final FlightRepository flightRepository;
@@ -60,12 +59,15 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
-    public FlightResponseDTO addFlight(Flight flight) {
+    public boolean existsById(Long id) {
+        return flightDAO.existsById(id);
+    }
 
+    @Override
+    public FlightResponseDTO addFlight(Flight flight) {
         Flight savedFlight = flightDAO.save(flight);
         if (nonNull(flight.getFlightSchedule())) {
-            Schedule schedule = scheduleDAO.save(flight.getFlightSchedule());
-
+            scheduleDAO.save(flight.getFlightSchedule());
         }
         return dtoConvertor.getFlightReponseDTO(savedFlight);
     }

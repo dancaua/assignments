@@ -19,18 +19,13 @@ public class AppUserServiceImpl implements AppUserService{
 	public UserDetails loadUserByUsername(String username) throws 
 	      UsernameNotFoundException {
 		
-		AppUsers user =  userRepo.getUsersByUsername(username);
+		AppUsers user = userRepo.getUsersByUsername(username);
 		System.out.println(" ");
 		System.out.println("--------Inside App User Service IMP ---------- ");
 		System.out.println(" Arg :- "+username);
 		System.out.println(" From Database "+user);
 		
 		return new MyUserDetails(user);
-		
-		
-		
-		//User user1 = new User("raja","abc",Arrays.asList(new SimpleGrantedAuthority("admin")));
-		//return user1;
 	}
 	
 	@Override

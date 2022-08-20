@@ -9,7 +9,10 @@ import com.abc.empapp.domain.entity.Flight;
 public class FlightDTOConvertor {
 
     public FlightResponseDTO getFlightReponseDTO(Flight flight) {
-        FlightResponseDTO dto = new FlightResponseDTO(flight.getFlightId() + "", flight.getFlightName());
+        FlightResponseDTO dto = new FlightResponseDTO();
+        dto.setFlightId(flight.getFlightId());
+        dto.setFlightName(flight.getFlightName());
+        dto.setFlightType(flight.getFlightType());
         return dto;
     }
 }

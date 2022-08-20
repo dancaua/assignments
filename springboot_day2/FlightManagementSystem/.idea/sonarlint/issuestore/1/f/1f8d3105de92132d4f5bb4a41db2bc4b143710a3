@@ -1,0 +1,15 @@
+
+_
+java:S1874"DRemove this use of "WebSecurityConfigurerAdapter"; it is deprecated.(”’­üüÿÿÿÿ
+S	java:S106 "9Replace this use of System.out or System.err by a logger.(ï×Éùûÿÿÿÿ
+U	java:S106."9Replace this use of System.out or System.err by a logger.(Õ–´­8±Ëü¨«0
+Z	java:S1064"9Replace this use of System.out or System.err by a logger.(Ÿ’’¶úÿÿÿÿ8²Ëü¨«0
+X
+java:S1874=";Remove this use of "NoOpPasswordEncoder"; it is deprecated.(å‰ö8²Ëü¨«0
+X	java:S125>"<This block of commented-out lines of code should be removed.(ƒ¡îû8²Ëü¨«0
+\
+java:S1161C":Add the "@Override" annotation above this method signature(ò—Þëýÿÿÿÿ8³Ëü¨«0
+U	java:S106M"9Replace this use of System.out or System.err by a logger.(€½€´8´Ëü¨«0
+W
+java:S1161R":Add the "@Override" annotation above this method signature(È†‹8´Ëü¨«0
+U	java:S106S"9Replace this use of System.out or System.err by a logger.(¬Þ¿Š8´Ëü¨«0

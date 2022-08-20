@@ -18,4 +18,5 @@ public interface FlightService {
 	FlightResponseDTO addSchedule(Long flightId, ScheduleDTO schedule);
 	ScheduleDTO getScheduleByFlight(Long flightId);
 	Flight getFlightById(Long id);
+	boolean existsById(Long id);
 }

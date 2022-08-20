@@ -13,4 +13,8 @@ public class FlightNotFoundException extends NoSuchElementException {
         super(cause);
         this.id = id;
     }
+
+    public FlightNotFoundException(String message) {
+        super(message);
+    }
 }

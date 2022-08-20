@@ -8,7 +8,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class FlightResponseDTO {
-	
-	private String flightNumber;
-	private String fligtName;
+
+	private Long flightId;
+	private String flightName;
+	private String flightType;
+
 }
